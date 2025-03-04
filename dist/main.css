@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overscroll-behavior: none;
+}
+
+body {
+    height: 100vh;
+}
+
+.main {
+    height: 100vh;
+}
+
+.container {
+    max-width: 1330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 15px;
+    height: 100%;
+}
+
+.collapse-button {
+    padding: 12px;
+    align-self: flex-start;
+    color: #fff;
+    background: #4989d3;
+    border-radius: 12px;
+    cursor: pointer;
+    outline: 2px solid transparent;
+    transition: outline 1s;
+}
+
+.collapse-button:focus {
+    outline: 2px solid #437cbe;
+    outline-offset: 1px;
+}
+
+.collapse-text {
+    margin-top: 10px;
+    width: 500px;
+    height: 0;
+    border: 1px solid transparent;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.collapse-text p {
+    margin: 20px;
+}
+
+.active-collapse-text {
+    height: 100px;
+    border: 1px solid #9e9e9e
+    /* animation-name: collapse;
+    animation-duration: 2s;
+    animation-fill-mode: forwards; */
+}
+
+.feedback-widget {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    align-self: flex-end;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    padding: 25px;
+}
+
+.feedback-button {
+    background: #b12f2f;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s;
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+}
+
+.feedback-button:hover {
+    width: 65px;
+    height: 65px;
+}
+
+.feedback-button-hidden {
+    transform: scale(0.2);
+    opacity: 0;
+    cursor: auto;
+
+    /* Вариант с aninamation */
+    /* animation: feedback-button-visible-hidden .2s 1 forwards; */
+}
+
+/* .feedback-button-visible {
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+} */
+
+/* @keyframes feedback-button-visible-hidden {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 20px;
+        height: 20px;
+        opacity: 0;
+    }
+} */
+
+.feedback {
+    box-shadow: 0px 0px 6px 4px rgba(34, 60, 80, 0.2);
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    padding: 15px;
+    position: absolute;
+    opacity: 0;
+    width: 220px;
+    height: 220px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all .3s;
+}
+
+.feedback-active {
+    transform: scale(1);
+    width: 250px;
+    height: 250px;
+    opacity: 1;
+
+    /* Вариант с animation */
+    /* animation: feedback-open .1s linear 1 forwards; */
+}
+
+/* @keyframes feedback-open {
+    0% {
+        width: 220px;
+        height: 220px;
+        opacity: 0;
+        right: 50px;
+        bottom: 50px;
+    }
+
+    100% {
+        right: 30px;
+        bottom: 30px;
+        width: 250px;
+        height: 250px;
+        opacity: 1;
+    }
+} */
+
+.feedback-textarea {
+    border: 1px solid #a1a1a1;
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+    resize: none;
+}
+
+.feedback button {
+    padding: 10px;
+    border: 1px solid #a1a1a1;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.button-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.button-close div {
+    position: absolute;
+    border-top: 1px solid #000;
+    width: 15px; 
+}
+
+.deg-45 {
+    transform: rotate(45deg);
+}
+
+.deg-135 {
+    transform: rotate(135deg);
+}
+
+/* @keyframes collapse {
+    0% {
+        height: 0;
+        border: 0;
+    }
+
+    25% {
+        border: 1px solid #9e9e9e;
+    }
+
+    100% {
+        height: 100px;
+        border: 1px solid #9e9e9e;
+    }
+} */
+
+
+
